@@ -41,4 +41,10 @@ public class mediaFinal {
         }
     }
 
+    public void exibirResultados(){
+        System.out.println("média do aluno:" + mediaFinal);
+
+        System.out.println("Resultado: o(a) aluno(a) " + nomeDoAluno + " está" );
+        definirAprovadoReprovado();
+    }
 }
