@@ -33,5 +33,12 @@ public class mediaFinal {
         mediaFinal = media /4;
         exibirResultados();
     }
+    public void definirAprovadoReprovado(){
+        if (mediaFinal >= 5) {
+            System.out.println("Aprovado.");
+        } else {
+            System.out.println("Reprovado.");
+        }
+    }
 
 }
