@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mediaFinal {
+public class MediaFinal {
     String nomeDoAluno;
     double nota1;
     double nota2;
@@ -37,9 +37,13 @@ public class mediaFinal {
     public void definirAprovadoReprovado(){
         if (mediaFinal >= 5) {
             situacao = "Aprovado!";
-        } else {
+        } else if (mediaFinal < 3){
             situacao = "Reprovado!";
+        } else {
+            situacao = "de recuperação!";
         }
+
+
         exibirResultados();
     }
 
@@ -47,6 +51,6 @@ public class mediaFinal {
         System.out.println("---------------------------------------");
         System.out.println("média do aluno:" + mediaFinal);
 
-        System.out.println("Resultado: o(a) aluno(a) " + nomeDoAluno + " está : " + situacao);
+        System.out.println("Resultado: o(a) aluno(a) " + nomeDoAluno + " está " + situacao);
     }
 }
