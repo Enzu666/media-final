@@ -8,6 +8,7 @@ public class mediaFinal {
     double nota4;
     double mediaFinal;
     double media;
+    String situacao;
 
     public void obterDados (){
         Scanner leitor = new Scanner(System.in);
@@ -31,20 +32,21 @@ public class mediaFinal {
     public void calcularDados(){
         media = nota1 + nota2 + nota3 + nota4;
         mediaFinal = media /4;
-        exibirResultados();
+        definirAprovadoReprovado();
     }
     public void definirAprovadoReprovado(){
         if (mediaFinal >= 5) {
-            System.out.println("Aprovado.");
+            situacao = "Aprovado!";
         } else {
-            System.out.println("Reprovado.");
+            situacao = "Reprovado!";
         }
+        exibirResultados();
     }
 
     public void exibirResultados(){
+        System.out.println("---------------------------------------");
         System.out.println("média do aluno:" + mediaFinal);
 
-        System.out.println("Resultado: o(a) aluno(a) " + nomeDoAluno + " está" );
-        definirAprovadoReprovado();
+        System.out.println("Resultado: o(a) aluno(a) " + nomeDoAluno + " está : " + situacao);
     }
 }
