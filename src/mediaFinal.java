@@ -28,4 +28,10 @@ public class mediaFinal {
         calcularDados();
     }
 
+    public void calcularDados(){
+        media = nota1 + nota2 + nota3 + nota4;
+        mediaFinal = media /4;
+        exibirResultados();
+    }
+
 }
